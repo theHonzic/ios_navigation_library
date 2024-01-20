@@ -8,11 +8,11 @@
 import SwiftUI
 
 public final class SheetCoordinator<T: SheetRoutable>: ObservableObject {
-    @Published var currentSheet: T?
+    @Published public var currentSheet: T?
     private var sheetStack: [T] = []
     
     @MainActor
-    func presentSheet(_ sheet: T) {
+    public func presentSheet(_ sheet: T) {
         sheetStack.append(sheet)
         
         if sheetStack.count == 1 {
@@ -21,7 +21,7 @@ public final class SheetCoordinator<T: SheetRoutable>: ObservableObject {
     }
     
     @MainActor
-    func sheetDismissed() {
+    public func sheetDismissed() {
         sheetStack.removeFirst()
         
         if let nextSheet = sheetStack.first {

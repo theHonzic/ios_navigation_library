@@ -8,25 +8,25 @@
 import SwiftUI
 
 public final class NavigationRouter<T: Routable>: ObservableObject {
-    @Published var stack: [T] = []
+    @Published public var stack: [T] = []
     
-    var currentItem: T? {
+    public var currentItem: T? {
         stack.last
     }
     
-    var isStackEmpty: Bool {
+    public var isStackEmpty: Bool {
         self.stack.count == 0
     }
     
-    func popBack() {
+    public func popBack() {
         self.stack.removeLast()
     }
     
-    func popToRoot() {
+    public func popToRoot() {
         self.stack = .init()
     }
     
-    func navigate(to route: T) {
+    public func navigate(to route: T) {
         self.stack.append(route)
     }
 }

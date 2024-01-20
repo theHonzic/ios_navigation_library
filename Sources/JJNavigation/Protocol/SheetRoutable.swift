@@ -11,5 +11,5 @@ public protocol SheetRoutable: Identifiable {
     associatedtype Body: View
 
     @ViewBuilder
-    func view(coordinator: SheetCoordinator<Self>) -> Body
+    public func view(coordinator: SheetCoordinator<Self>) -> Body
 }

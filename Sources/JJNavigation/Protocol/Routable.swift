@@ -11,5 +11,5 @@ public protocol Routable: Identifiable, Hashable {
     associatedtype Body: View
 
     @ViewBuilder
-    func view(coordinator: NavigationRouter<Self>) -> Body
+    public func view(coordinator: NavigationRouter<Self>) -> Body
 }

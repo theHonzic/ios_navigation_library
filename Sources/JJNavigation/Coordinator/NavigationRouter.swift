@@ -8,6 +8,11 @@
 import SwiftUI
 
 public final class NavigationRouter<T: Routable>: ObservableObject {
+    
+    public init() {
+        
+    }
+    
     @Published public var stack: [T] = []
     
     public var currentItem: T? {

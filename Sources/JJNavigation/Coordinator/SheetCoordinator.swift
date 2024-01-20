@@ -8,6 +8,11 @@
 import SwiftUI
 
 public final class SheetCoordinator<T: SheetRoutable>: ObservableObject {
+    
+    public init() {
+        
+    }
+    
     @Published public var currentSheet: T?
     private var sheetStack: [T] = []
     

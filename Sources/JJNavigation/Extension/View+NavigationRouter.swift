@@ -16,7 +16,7 @@ extension View {
 
 public struct CustomNavigation<Router: Routable>: ViewModifier {
     @EnvironmentObject var coordinator: NavigationRouter<Router>
-    func body(content: Content) -> some View {
+    public func body(content: Content) -> some View {
         NavigationStack(path: $coordinator.stack) {
             content
                 .navigationDestination(for: Router.self, destination: { destination in

@@ -10,7 +10,7 @@ import SwiftUI
 public struct SheetCoordinating<Sheet: SheetRoutable>: ViewModifier {
     @StateObject var coordinator: SheetCoordinator<Sheet>
 
-    func body(content: Content) -> some View {
+    public func body(content: Content) -> some View {
         content
             .sheet(item: $coordinator.currentSheet, onDismiss: {
                 coordinator.sheetDismissed()

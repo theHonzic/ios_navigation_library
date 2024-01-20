@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SheetCoordinating<Sheet: SheetRoutable>: ViewModifier {
+public struct SheetCoordinating<Sheet: SheetRoutable>: ViewModifier {
     @StateObject var coordinator: SheetCoordinator<Sheet>
 
     func body(content: Content) -> some View {

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-protocol Routable: Identifiable, Hashable {
+public protocol Routable: Identifiable, Hashable {
     associatedtype Body: View
 
     @ViewBuilder

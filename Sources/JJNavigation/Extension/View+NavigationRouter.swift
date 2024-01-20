@@ -8,7 +8,7 @@
 import SwiftUI
 
 extension View {
-    func navigating<Router: Routable>(in router: NavigationRouter<Router>) -> some View {
+    public func navigating<Router: Routable>(in router: NavigationRouter<Router>) -> some View {
         modifier(CustomNavigation<Router>())
             .environmentObject(router)
     }

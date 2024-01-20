@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-final class SheetCoordinator<T: SheetRoutable>: ObservableObject {
+public final class SheetCoordinator<T: SheetRoutable>: ObservableObject {
     @Published var currentSheet: T?
     private var sheetStack: [T] = []
     

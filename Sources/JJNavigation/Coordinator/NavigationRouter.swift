@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-final class NavigationRouter<T: Routable>: ObservableObject {
+public final class NavigationRouter<T: Routable>: ObservableObject {
     @Published var stack: [T] = []
     
     var currentItem: T? {

@@ -21,7 +21,7 @@ struct SheetCoordinating<Sheet: SheetRoutable>: ViewModifier {
 }
 
 extension View {
-    func sheetCoordinating<Sheet: SheetRoutable>(coordinator: SheetCoordinator<Sheet>) -> some View {
+    public func sheetCoordinating<Sheet: SheetRoutable>(coordinator: SheetCoordinator<Sheet>) -> some View {
         modifier(SheetCoordinating(coordinator: coordinator))
             .environmentObject(coordinator)
     }

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-protocol SheetRoutable: Identifiable {
+public protocol SheetRoutable: Identifiable {
     associatedtype Body: View
 
     @ViewBuilder
